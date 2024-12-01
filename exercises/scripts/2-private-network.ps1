@@ -31,35 +31,35 @@ if ($HubLocation.Length -eq 0) {
 
 # Subnet already created in hub location
 
-.\subscripts\2-1-subnet.ps1 `
-    -SubnetName $env:ASNFD_DEFAULT_SNET_NAME_EU `
-    -ResourceGroupName $env:ASNFD_RESOURCE_GROUP_NAME_EU `
-    -AddressPrefixes "10.0.4.0/25" `
-    -VnetName $env:ASNFD_VNET_NAME_EU #`
-    #-AdditionalArguments "--service-endpoints Microsoft.KeyVault Microsoft.Storage"
+# .\subscripts\2-1-subnet.ps1 `
+#     -SubnetName $env:ASNFD_DEFAULT_SNET_NAME_EU `
+#     -ResourceGroupName $env:ASNFD_RESOURCE_GROUP_NAME_EU `
+#     -AddressPrefixes "10.0.4.0/25" `
+#     -VnetName $env:ASNFD_VNET_NAME_EU #`
+#     #-AdditionalArguments "--service-endpoints Microsoft.KeyVault Microsoft.Storage"
 
-.\subscripts\2-1-subnet.ps1 `
-    -SubnetName $env:ASNFD_APPS_SNET_NAME_EU `
-    -ResourceGroupName $env:ASNFD_RESOURCE_GROUP_NAME_EU `
-    -AddressPrefixes "10.0.4.128/25" `
-    -VnetName $env:ASNFD_VNET_NAME_EU `
-    -AdditionalArguments "--delegations Microsoft.Web/serverFarms"
+# .\subscripts\2-1-subnet.ps1 `
+#     -SubnetName $env:ASNFD_APPS_SNET_NAME_EU `
+#     -ResourceGroupName $env:ASNFD_RESOURCE_GROUP_NAME_EU `
+#     -AddressPrefixes "10.0.4.128/25" `
+#     -VnetName $env:ASNFD_VNET_NAME_EU `
+#     -AdditionalArguments "--delegations Microsoft.Web/serverFarms"
 
-.\subscripts\2-1-subnet.ps1 `
-    -SubnetName $env:ASNFD_DEFAULT_SNET_NAME_US `
-    -ResourceGroupName $env:ASNFD_RESOURCE_GROUP_NAME_US `
-    -AddressPrefixes "10.0.8.0/25" `
-    -VnetName $env:ASNFD_VNET_NAME_US #`
-    #-AdditionalArguments "--service-endpoints Microsoft.KeyVault Microsoft.Storage"
+# .\subscripts\2-1-subnet.ps1 `
+#     -SubnetName $env:ASNFD_DEFAULT_SNET_NAME_US `
+#     -ResourceGroupName $env:ASNFD_RESOURCE_GROUP_NAME_US `
+#     -AddressPrefixes "10.0.8.0/25" `
+#     -VnetName $env:ASNFD_VNET_NAME_US #`
+#     #-AdditionalArguments "--service-endpoints Microsoft.KeyVault Microsoft.Storage"
 
-.\subscripts\2-1-subnet.ps1 `
-    -SubnetName $env:ASNFD_APPS_SNET_NAME_US `
-    -ResourceGroupName $env:ASNFD_RESOURCE_GROUP_NAME_US `
-    -AddressPrefixes "10.0.8.128/25" `
-    -VnetName $env:ASNFD_VNET_NAME_US `
-    -AdditionalArguments "--delegations Microsoft.Web/serverFarms"
+# .\subscripts\2-1-subnet.ps1 `
+#     -SubnetName $env:ASNFD_APPS_SNET_NAME_US `
+#     -ResourceGroupName $env:ASNFD_RESOURCE_GROUP_NAME_US `
+#     -AddressPrefixes "10.0.8.128/25" `
+#     -VnetName $env:ASNFD_VNET_NAME_US `
+#     -AdditionalArguments "--delegations Microsoft.Web/serverFarms"
 
-.\subscripts\2-2-private-dns-zones.ps1 $TeamName
+# .\subscripts\2-2-private-dns-zones.ps1 $TeamName
 
 .\subscripts\2-3-private-endpoints.ps1 $TeamName $EuLocation $UsLocation $HubLocation
 

@@ -25,3 +25,9 @@ for ($i = 0; $i -lt 2; $i++) {
         -ResourceGroupName2 $ResourceGroupNames[$i] `
         -VnetName2 $VnetNames[$i]
 }
+
+
+$env:ASNFD_VNET_NAME_HUB = "vnet-tky-dev-hub"
+$env:ASNFD_VNET_NAME_EU = "vnet-tky-dev-eu"
+$env:ASNFD_VNET_NAME_US = "vnet-tky-dev-us"
+

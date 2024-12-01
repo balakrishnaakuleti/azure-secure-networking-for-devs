@@ -60,3 +60,5 @@ The current status of the hub resource group should now be as depicted below. EU
 ## Back to the overview
 
 [Azure Secure Networking for Developers - start page](/README.md)
+
+app-tky-dev-eu.azurewebsites.net
